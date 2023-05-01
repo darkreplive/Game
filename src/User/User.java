@@ -8,7 +8,6 @@ public class User {
     private Template character = new Template();
 
     public void read(File file){
-        int count=1;
         try(Scanner input = new Scanner(file)){
             while (input.hasNextLine()){
                     character.setType(input.next());
@@ -21,7 +20,6 @@ public class User {
                     character.setPhyAttack(input.nextInt());
                     character.setMagAttack(input.nextInt());
                     character.setSpeed(input.nextInt());
-                count++;
             }//while end
         }//try end
         catch (FileNotFoundException e){System.out.println("File not found "+e.getMessage());}
